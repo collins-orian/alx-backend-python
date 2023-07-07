@@ -4,8 +4,9 @@
 float multiplier as argument and returns a function that multiplies
 a float by multiplier'''
 
+from types import callable
 
-def make_multiplier(multiplier: float):
-    def multiplier_func(x: float) -> float:
-        return x * multiplier
-    return multiplier_func
+
+def make_multiplier(multiplier: float) -> callable[[float], float]:
+    '''Creates a multiplier function'''
+    return lambda param: param * multiplier
