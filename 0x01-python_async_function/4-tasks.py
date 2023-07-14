@@ -19,5 +19,3 @@ async def task_wait_n(n: int, max_delay: int) -> List[float]:
         delay = await task_wait_random(max_delay)
         delays.append(delay)
     return sorted(delays)
-
-print(asyncio.run(task_wait_n(5, 9)))
