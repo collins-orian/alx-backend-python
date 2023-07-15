@@ -9,10 +9,10 @@ Use the random module.
 
 import asyncio
 import random
-from typing import Generator
+from typing import AsyncGenerator
 
 
-async def async_generator() -> Generator[float, None, None]:
+async def async_generator() -> AsyncGenerator[float, None]:
     '''Generates a sequence of 10 numbers.
     '''
     for _ in range(10):
